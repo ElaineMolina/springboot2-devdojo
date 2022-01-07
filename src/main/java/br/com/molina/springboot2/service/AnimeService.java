@@ -12,4 +12,4 @@ public class AnimeService {
         return List.of(new Anime(1L,"Boku No Hero"), new Anime(2L,"Berserk"));
     }
 }
-//teste
+//teste//
