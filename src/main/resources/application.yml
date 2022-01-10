@@ -1,0 +1,3 @@
+server:
+  error:
+    include-stacktree: on_param
