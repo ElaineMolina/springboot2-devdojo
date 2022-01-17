@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+  db:
+    image: mysql
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "abobora"
+      ports:
+        "3306:3306"
+      volume:
+        _ molina_data:/var/lib/mysql
+
+volumes:
+  molina_data:
+
