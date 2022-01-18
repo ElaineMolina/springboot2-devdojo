@@ -1,6 +1,7 @@
 package br.com.molina.springboot2.service;
 
 import br.com.molina.springboot2.domain.Anime;
+import br.com.molina.springboot2.exception.BadRequestException;
 import br.com.molina.springboot2.mapper.AnimeMapper;
 import br.com.molina.springboot2.repository.AnimeRepository;
 import br.com.molina.springboot2.request.AnimePostRequestBody;
@@ -29,7 +30,7 @@ public class AnimeService {
 
     public Anime findByIdOrThrowBadRequestException(long id){
         return animeRepository.findById(id)
-                .orElseThrow(()-> new ResponseStatusException(HttpStatus.BAD_REQUEST, "Animes not Found"));
+                .orElseThrow(()-> new BadRequestException("Animes not Found"));
     }
 
     public Anime save(AnimePostRequestBody animePostResquestBody) {
