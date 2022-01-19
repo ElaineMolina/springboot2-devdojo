@@ -11,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
@@ -32,7 +33,7 @@ public class AnimeService {
         return animeRepository.findById(id)
                 .orElseThrow(()-> new BadRequestException("Animes not Found"));
     }
-
+    @Transactional
     public Anime save(AnimePostRequestBody animePostResquestBody) {
         return animeRepository.save(AnimeMapper.INSTANCE.toAnime(animePostResquestBody));
     }
