@@ -9,7 +9,9 @@ import br.com.molina.springboot2.request.AnimePutRequestBody;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import javax.transaction.Transactional;
 import java.util.List;
@@ -36,7 +38,7 @@ public class AnimeService {
 
     public Anime findByIdOrThrowBadRequestException(long id){
         return animeRepository.findById(id)
-                .orElseThrow(()-> new BadRequestException("Animes not Found"));
+                .orElseThrow(()-> new ResponseStatusException(HttpStatus.BAD_REQUEST, "Anime not Found"));
     }
     @Transactional
     public Anime save(AnimePostRequestBody animePostRequestBody) {
