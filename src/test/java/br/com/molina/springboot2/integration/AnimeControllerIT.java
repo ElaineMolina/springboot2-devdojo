@@ -26,7 +26,7 @@ import java.util.List;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @AutoConfigureTestDatabase
 @DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_EACH_TEST_METHOD)
-public class AnimeControllerIT {
+class AnimeControllerIT {
 
     @Autowired
     private TestRestTemplate testRestTemplate;
@@ -59,8 +59,9 @@ public class AnimeControllerIT {
         List<Anime> animes = testRestTemplate.exchange("/animes/all", HttpMethod.GET, null,
                 new ParameterizedTypeReference<List<Anime>>() {
                 }).getBody();
-        Assertions.assertThat(animes).isNotNull();
+
         Assertions.assertThat(animes)
+                .isNotNull()
                 .isNotEmpty()
                 .hasSize(1);
 
@@ -76,9 +77,7 @@ public class AnimeControllerIT {
 
         Anime anime = testRestTemplate.getForObject("/animes/{id}", Anime.class, expectedId);
 
-        Assertions.assertThat(anime)
-                .isNotNull();
-
+        Assertions.assertThat(anime).isNotNull();
 
         Assertions.assertThat(anime.getId()).isNotNull().isEqualTo(expectedId);
 
@@ -118,6 +117,7 @@ public class AnimeControllerIT {
                 .isEmpty();
 
     }
+
     @Test
     @DisplayName("save returns anime when successful")
     void save_ReturnsAnime_WhenSuccessful() {
