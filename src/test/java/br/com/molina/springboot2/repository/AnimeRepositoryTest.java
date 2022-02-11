@@ -2,6 +2,7 @@ package br.com.molina.springboot2.repository;
 
 import br.com.molina.springboot2.domain.Anime;
 import br.com.molina.springboot2.util.AnimeCreator;
+import lombok.extern.log4j.Log4j2;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -70,18 +71,18 @@ class AnimeRepositoryTest {
         List<Anime> animes = this.animeRepository.findByName("nãoexisteteste");
         Assertions.assertThat(animes).isEmpty();
     }
-    @Test
-    @DisplayName("Save throw ConstraintViolationException when name is empty")
-    void save_ThrowConstrainVaiolationException_WhenNameIsEmpty() {
-        Anime anime = new Anime();
-//        Assertions.assertThatThrownBy(() -> this.animeRepository.save(anime))
-//            .isInstanceOf(ConstraintViolationException.class);
-
-            Assertions.assertThatExceptionOfType(ConstraintViolationException.class)
-                    .isThrownBy(() -> this.animeRepository.save(anime))
-                    .withMessageContaining("The anime name cannot be empty");
-
-    }
+//    @Test
+//    @DisplayName("Save throw ConstraintViolationException when name is empty")
+//    void save_ThrowConstrainVaiolationException_WhenNameIsEmpty() {
+//        Anime anime = new Anime();
+////        Assertions.assertThatThrownBy(() -> this.animeRepository.save(anime))
+////            .isInstanceOf(ConstraintViolationException.class);
+//
+//            Assertions.assertThatExceptionOfType(ConstraintViolationException.class)
+//                    .isThrownBy(() -> this.animeRepository.save(anime))
+//                    .withMessageContaining("The anime name cannot be empty");
+//
+//    }
 
 
 }

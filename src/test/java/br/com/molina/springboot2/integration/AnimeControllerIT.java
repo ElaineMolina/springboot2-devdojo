@@ -38,12 +38,14 @@ class AnimeControllerIT {
     @DisplayName("list returns list of anime inside page object when successful")
     void list_ReturnsListOfAnimesInsidePageObject_WhenSuccessful() {
         Anime savedAnime = animeRepository.save(AnimeCreator.createAnimeToBeSaved());
+
         String expectedName = savedAnime.getName();
 
         PageableResponse<Anime> animePage = testRestTemplate.exchange("/animes", HttpMethod.GET, null,
                 new ParameterizedTypeReference<PageableResponse<Anime>>() {
                 }).getBody();
         Assertions.assertThat(animePage).isNotNull();
+
         Assertions.assertThat(animePage.toList())
                 .isNotEmpty()
                 .hasSize(1);
@@ -152,6 +154,7 @@ class AnimeControllerIT {
                 HttpMethod.DELETE, null, Void.class, savedAnime.getId());
 
         Assertions.assertThat(animeResponseEntity).isNotNull();
+
         Assertions.assertThat(animeResponseEntity.getStatusCode()).isEqualTo(HttpStatus.NO_CONTENT);
     }
 }

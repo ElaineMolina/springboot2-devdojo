@@ -58,6 +58,7 @@ class AnimeServiceTest {
         @DisplayName("listAll returns list of anime inside page object when successful")
         void listAll_ReturnsListOfAnimesInsidePageObject_WhenSuccessful() {
             String expectedName = AnimeCreator.createValidAnime().getName();
+
             Page<Anime> animePage = animeService.listAll(PageRequest.of(1, 1));
             Assertions.assertThat(animePage).isNotNull();
 
@@ -86,6 +87,7 @@ class AnimeServiceTest {
         @DisplayName("findByIdOrThrowBadRequestException returns anime when successful")
         void findByIdOrThrowBadRequestException_ReturnsAnime_WhenSuccessful() {
             Long expectedId = AnimeCreator.createValidAnime().getId();
+
             Anime anime = animeService.findByIdOrThrowBadRequestException(1);
 
             Assertions.assertThat(anime)

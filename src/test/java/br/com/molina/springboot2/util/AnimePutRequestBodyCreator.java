@@ -5,8 +5,8 @@ import br.com.molina.springboot2.request.AnimePutRequestBody;
 public class AnimePutRequestBodyCreator {
     public static AnimePutRequestBody createAnimePutRequestBody() {
         return AnimePutRequestBody.builder()
-                .name(AnimeCreator.createValidUpdateAnime().getName())
                 .id(AnimeCreator.createValidUpdateAnime().getId())
+                .name(AnimeCreator.createValidUpdateAnime().getName())
                 .build();
 
     }
