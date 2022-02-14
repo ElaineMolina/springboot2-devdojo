@@ -73,6 +73,7 @@ class AnimeServiceTest {
         @DisplayName("listAllNonPageable returns list of anime when successful")
         void listAllNonPageable_ReturnsListOfAnimes_WhenSuccessful() {
             String expectedName = AnimeCreator.createValidAnime().getName();
+
             List<Anime> animes = animeService.listAllNonPageable();
 
             Assertions.assertThat(animes)
@@ -125,6 +126,7 @@ class AnimeServiceTest {
         void findByName_ReturnsEmptyListOfAnime_WhenAnineIsNotFound() {
             BDDMockito.when(animeRepositoryMock.findByName(ArgumentMatchers.anyString()))
                     .thenReturn(Collections.emptyList());
+
             List<Anime> animes = animeService.findByName("anime");
 
             Assertions.assertThat(animes)

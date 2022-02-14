@@ -1,4 +1,4 @@
-package br.com.molina.springboot2.exception.client;
+package br.com.molina.springboot2.client;
 
 import br.com.molina.springboot2.domain.Anime;
 import lombok.extern.log4j.Log4j2;
