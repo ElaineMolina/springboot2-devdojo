@@ -1,0 +1,17 @@
+D:\Estudos Programação\Spring Boot\springboot2-essentials\src\main\java\br\com\molina\springboot2\repository\AnimeRepository.java
+D:\Estudos Programação\Spring Boot\springboot2-essentials\src\main\java\br\com\molina\springboot2\wrapper\PageableResponse.java
+D:\Estudos Programação\Spring Boot\springboot2-essentials\src\main\java\br\com\molina\springboot2\exception\BadRequestExceptionDetails.java
+D:\Estudos Programação\Spring Boot\springboot2-essentials\src\main\java\br\com\molina\springboot2\handler\RestExceptionHandler.java
+D:\Estudos Programação\Spring Boot\springboot2-essentials\src\main\java\br\com\molina\springboot2\mapper\AnimeMapper.java
+D:\Estudos Programação\Spring Boot\springboot2-essentials\src\main\java\br\com\molina\springboot2\service\AnimeService.java
+D:\Estudos Programação\Spring Boot\springboot2-essentials\src\main\java\br\com\molina\springboot2\exception\ExceptionDetails.java
+D:\Estudos Programação\Spring Boot\springboot2-essentials\src\main\java\br\com\molina\springboot2\request\AnimePostRequestBody.java
+D:\Estudos Programação\Spring Boot\springboot2-essentials\src\main\java\br\com\molina\springboot2\configurer\MolinaWebMvcConfigurer.java
+D:\Estudos Programação\Spring Boot\springboot2-essentials\src\main\java\br\com\molina\springboot2\exception\ValidationExceptionsDetails.java
+D:\Estudos Programação\Spring Boot\springboot2-essentials\src\main\java\br\com\molina\springboot2\exception\BadRequestException.java
+D:\Estudos Programação\Spring Boot\springboot2-essentials\src\main\java\br\com\molina\springboot2\controller\AnimeController.java
+D:\Estudos Programação\Spring Boot\springboot2-essentials\src\main\java\br\com\molina\springboot2\Springboot2EssentialsApplicationStart.java
+D:\Estudos Programação\Spring Boot\springboot2-essentials\src\main\java\br\com\molina\springboot2\request\AnimePutRequestBody.java
+D:\Estudos Programação\Spring Boot\springboot2-essentials\src\main\java\br\com\molina\springboot2\client\SpringClient.java
+D:\Estudos Programação\Spring Boot\springboot2-essentials\src\main\java\br\com\molina\springboot2\domain\Anime.java
+D:\Estudos Programação\Spring Boot\springboot2-essentials\src\main\java\br\com\molina\springboot2\util\DateUtil.java

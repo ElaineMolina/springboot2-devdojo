@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: br.com.molina.springboot2.controller.AnimeControllerTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.667 s - in br.com.molina.springboot2.controller.AnimeControllerTest
