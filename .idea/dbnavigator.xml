@@ -32,9 +32,7 @@
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files>
-      <object connection-id="6b05d626-5693-48b2-9645-7c8f7c99c991" object-ref="schemas/anime/tables/molina_user" />
-    </open-files>
+    <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="6b05d626-5693-48b2-9645-7c8f7c99c991" />
