@@ -16,3 +16,12 @@ logging:
       org:
         hibernate:
           SQL: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+
