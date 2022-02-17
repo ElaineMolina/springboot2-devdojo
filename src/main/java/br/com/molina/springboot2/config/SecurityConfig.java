@@ -20,6 +20,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+
         /**
          * BasicAuthenticationFilter
          * UsernamePasswordAuthenticationFilter
@@ -30,7 +31,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
          * @param http
          * @throws Exception
          */
-        http.csrf().disable().authorizeRequests()
+
+        http.csrf().disable()
+                .authorizeRequests()
 //                csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
                 .and()
                 .authorizeRequests()
@@ -47,11 +50,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         PasswordEncoder passwordEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
-        log.info("Password encoded {}",passwordEncoder.encode("testando"));
+        log.info("Password encoded {}", passwordEncoder.encode("test"));
         auth.inMemoryAuthentication()
                 .withUser("elaine2")
                 .password(passwordEncoder.encode("test"))
-                .roles("USER","ADMIN")
+                .roles("USER" , "ADMIN")
                 .and()
                 .withUser("molina2")
                 .password(passwordEncoder.encode("test"))

@@ -16,7 +16,7 @@ public class MolinaUserDetailsService implements UserDetailsService {
     private final MolinaUserRepository molinaUserRepository;
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String username) {
         return Optional.ofNullable(molinaUserRepository.findByUsername(username))
                 .orElseThrow(() -> new UsernameNotFoundException("Molina User not found "));
     }

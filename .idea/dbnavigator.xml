@@ -33,14 +33,14 @@
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files>
-      <object connection-id="6b05d626-5693-48b2-9645-7c8f7c99c991" object-ref="consoles/Connection 1" />
+      <object connection-id="6b05d626-5693-48b2-9645-7c8f7c99c991" object-ref="schemas/anime/tables/molina_user" />
     </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="6b05d626-5693-48b2-9645-7c8f7c99c991" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="6b05d626-5693-48b2-9645-7c8f7c99c991" dataset="anime.molina_user" active-filter-id="">
+    <filter-actions connection-id="6b05d626-5693-48b2-9645-7c8f7c99c991" dataset="anime.molina_user" active-filter-id="EMPTY_FILTER">
       <filter id="ca0d0100-6d3f-45cd-8fe5-713f23465eb4" name=" &amp; ROLE_ADM, ROLE_USER" temporary="false" custom-name="false" type="basic" join-type="AND">
         <condition column="id" operator="=" value="" active="true" />
         <condition column="authorities" operator="=" value="ROLE_ADM, ROLE_USER" active="true" />

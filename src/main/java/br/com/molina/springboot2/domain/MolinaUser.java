@@ -25,16 +25,15 @@ public class MolinaUser implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotEmpty(message = "The anime name cannot be empty")
+    @NotEmpty(message = "The user's  name cannot be empty")
     private String name;
-
     private String username;
     private String password;
     private String authorities;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return Arrays.stream(authorities.split(","))
+        return Arrays.stream(authorities.split(" , "))
                 .map(SimpleGrantedAuthority::new)
                 .collect(Collectors.toList());
     }
